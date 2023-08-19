@@ -1,0 +1,514 @@
+/* -------------- MENU - NAV -------------- */
+
+/* BOX MODEL */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Header */
+.header {
+    /*background-color: var(--black);*/
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    /*position: sticky;
+    top: 0;*/
+    width: 100%;
+    
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+/* Logo */
+.header_logo {
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+/* Nav menu */
+.nav {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--white);
+    overflow: hidden;
+    color: black;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.menu a {
+    display: block;
+    padding: 30px;
+    color: black;
+}
+
+.menu a:hover {
+    background-color: #d1d8da;
+}
+
+/* Menu Icon */
+.hamb {
+    cursor: pointer;
+    padding: 40px 20px;
+}
+
+/* Style label tag */
+
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+/* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked~nav {
+    max-height: 100%;
+}
+
+.side-menu:checked~.hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/* ------------ ------------- */
+
+/* HEADER */
+.header_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    margin-top: 2em;
+}
+
+.download {
+    color: black;
+    background-color: #f9f9f97b;
+    font-size: 1.05em;
+    padding: 1em;
+    margin: 1.2em 0 0 0;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.download:hover {
+    font-weight: bold;
+    background-color: #89959a;
+    color: white;
+}
+
+/* MAIN */
+
+/* EDUCATION WORK */
+
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    margin: 1em 0em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.all a {
+    color: black;
+    text-decoration: underline;
+    
+}
+
+.all a:hover {
+    color: #7b8185;
+}
+
+.edu_work {
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill, .hobby {
+    margin-bottom: 0em;
+    padding: 2em;
+}
+
+.skill_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.skill_img img {
+    height: 5em;
+}
+
+.hobby img {
+    margin: 2em -2em 0em -2em;
+    max-width: 100vw;
+    min-width: 100vw;
+}
+
+/* LANGUAGES */
+table {
+    margin: 0em 1em 5em 1em;
+    padding: 1em;
+    font-size: 1.05em;
+}
+
+td {
+    padding: 0.7em 1.5em 0.7em 0em;
+}
+
+/* HOBBIES */
+.hobby_description {
+    margin-bottom: 2em;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 0.5em;
+    background-color: #979fa3;
+    color: white;
+}
+
+.c {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+/* ANIMATION */
+
+
+
+/* VIEWPORT SIZE */
+
+@media (min-width: 768px) {
+
+    /* HEADER */
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100vw;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .menu a {
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        text-transform: uppercase;
+    }
+
+    .menu a:hover {
+        background-color: #d1d8da;
+        color: var(--black);
+    }
+
+    .hamb {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MAIN*/
+    /* EDUCATION WORK */
+    .all {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edu_work {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        max-width: 42em;
+        min-width: 42em;
+    }
+
+    .edu_work_header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .edu_work_description p {
+        max-width: 750px;
+    }
+
+    .time {
+        text-align: right;
+        width: 13em;
+    }
+
+    .edu_work_2, .edu_work_4 {
+        align-self: flex-end;
+            
+    }
+
+    /* SKILLS */
+    .skill {
+        margin-left: 2em;
+        margin-right: 2em;
+        display: flex;
+        gap: 3vw
+    }
+
+    .skill_img {
+        margin-top: 0em;
+    }
+
+    .skill_2 .skill_img,
+    .skill_4 .skill_img {
+        order: 0;
+    }
+
+    .skill_2 .skill_description,
+    .skill_4 .skill_description {
+        order: 1;
+        text-align: right;
+    }
+
+    /* LANGUAGES */
+    table {
+        padding-left: 5vw;
+    }
+
+    /* HOBBIES*/
+    .hobby_description {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .hobby_img {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .hobby_img img {
+        max-width: 60vw;
+        min-width: 60vw;
+    }
+    
+    .hobby_img_2 {
+        align-self: flex-end;
+    }
+
+    .inline-photo {
+        box-shadow: 1em 1em 2em .25em rgba(0, 0, 0, .2);
+        opacity: 0;
+        transform: translateX(-20em);
+        transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+            opacity .3s .25s ease-out;
+        max-width: 600px;
+        width: 90%;
+        will-change: transform, opacity;
+    }
+    
+    .inline-photo.is-visible {
+        opacity: 1;
+        transform: translateX(0em);;
+    }
+
+    .inline-photo-2 {
+        box-shadow: 1em 1em 2em .25em rgba(0, 0, 0, .2);
+        opacity: 0;
+        transform: translateX(20em);
+        transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+            opacity .3s .25s ease-out;
+        max-width: 600px;
+        width: 90%;
+        will-change: transform, opacity;
+    }
+
+    .inline-photo-2.is-visible {
+        opacity: 1;
+        transform: translateX(0em);
+        ;
+    }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5em 2em;
+    }
+
+    .logo_all {
+        margin-bottom: -0.2em;
+    }
+
+    .logo:hover {
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* MAIN */
+    .edu_work {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .skill {
+        max-width: 65em;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .hobby_description {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-bottom: 3em;
+
+    }
+
+    .hobby_img img {
+        max-width: 50vw;
+        min-width: 50vw; }                         
+}
+
+@media (min-width: 1200px) {
+
+    /* MAIN */
+    .edu_work {
+        margin-left: 19vw;
+        margin-right: 19vw;
+    }
+
+    .skill {
+        max-width: 60em;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    table {
+        padding-left: 19vw;
+    }
+
+    .hobby_description {
+        margin-left: 18vw;
+        margin-right: 18vw;
+
+    }
+
+    .hobby_img {
+        margin-left: 10vw;
+            margin-right: 10vw;
+    }
+
+    .hobby img {
+        border-radius: 2em;
+    }
+}
+
+
